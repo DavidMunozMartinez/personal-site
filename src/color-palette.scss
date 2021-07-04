@@ -1,0 +1,20 @@
+$white: rgb(231, 231, 231);
+$black: rgb(34, 34, 34);
+$disabled: lightgray;
+
+$app-clear-palette: (
+  bg-color: #EAE7DC,
+  text-color: #8E8D8A,
+  disabled: $disabled,
+  primary-color: (
+    tint: #dfa6a2,
+    shade: #a34039,
+    base: #E85A4F
+  )
+);
+
+// $app-dark-palette: (
+//   bg-color: $black,
+//   text-color: $white
+// );
+

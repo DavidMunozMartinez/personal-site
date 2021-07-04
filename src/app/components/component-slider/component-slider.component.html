@@ -1,0 +1,7 @@
+<div>
+  <div *ngFor="let view of views" class="view">
+    <ng-template [ngComponentOutlet]="view.component"></ng-template>
+  </div>
+  
+  <app-custom-scroller [views]="views"></app-custom-scroller>
+</div>

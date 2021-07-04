@@ -1,0 +1,26 @@
+@import "./color-palette";
+
+@mixin make-theme($palette) {
+  background-color: map-get($palette, "bg-color");
+
+  [theme].primary-color {
+    background-color: map-get(map-get($palette, "primary-color"), "base");
+  }
+
+  [theme].primary-color.tint {
+    background-color: map-get(map-get($palette, "primary-color"), "tint");
+  }
+
+  [theme].primary-color.shade {
+    background-color: map-get(map-get($palette, "primary-color"), "shade");
+  }
+
+  * {
+    background-color: map-get($palette, "bg-color");
+    color: map-get($palette, "text-color");
+  }
+}
+
+body.default-theme {
+  @include make-theme($app-clear-palette);
+}

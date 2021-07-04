@@ -1,0 +1,52 @@
+@import '../../../color-palette.scss';
+
+.scroller-container {
+  right: 0;
+  top: 0;
+  position: fixed;
+  width: 50px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  .scroll-line {
+    position: absolute;
+    height: 100%;
+    width: 6px;
+    background-color: lightgray;
+    left: calc(50% - 3px);
+  }
+
+  .dot-container {
+    cursor: pointer;
+    position: relative;
+    .dot {
+      border-radius: 50%;
+      margin: 0 auto;
+      display: block;
+      width: 20px;
+      height: 20px;
+      transition: transform 0.2s;
+      box-sizing: content-box;
+    }
+    .dot.primary-color:not(.tint) {
+      box-shadow: 0px 0px 10px 5px rgba(255,255,255, 0.5);
+    }
+    .dot:hover {
+      transform: scale(1.2);
+    }
+
+    .dot + .tooltip {
+      left: -150%;
+      top: 0;
+      transition: opacity 0.2s;
+      opacity: 0;
+      position: absolute;
+    }
+
+    .dot:hover + .tooltip {
+      opacity: 1;
+    }
+  }
+}

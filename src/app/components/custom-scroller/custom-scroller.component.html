@@ -1,0 +1,9 @@
+<div class="scroller-container">
+  <div theme class="scroll-line primary-color tint"></div>
+  <div *ngFor="let view of views" class="dot-container">
+    <div theme class="dot primary-color" [ngClass]="{'tint': !view.active}"></div>
+    <div class="tooltip">
+      {{view.tooltip}}
+    </div>
+  </div>
+</div>

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { HomeViewComponent } from './views/home-view/home-view.component';
+import { IComponentSliders } from './components/component-slider/component-slider.component';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'my-site';
+
+  views: Array<IComponentSliders> = [
+    {
+      component: HomeViewComponent,
+      tooltip: 'Home',
+      active: true
+    }
+  ]
+
+  ngOnInit() {
+
+  }
 }
